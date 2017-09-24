@@ -3,12 +3,12 @@ class PortfoliosController < ApplicationController
     def index
         @portfolio_items = Portfolio.all
     end
-    
+
     def new
         @portfolio_item = Portfolio.new
         3.times { @portfolio_item.technologies.build }
     end
-    
+
     # POST /portfolio
       def create
         @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
@@ -21,11 +21,11 @@ class PortfoliosController < ApplicationController
           end
         end
       end
-    
+
         def edit
             @portfolio_item = Portfolio.find(params[:id])
         end
-    
+
       # PATCH/PUT /portfolios/1
       def update
           @portfolio_item = Portfolio.find(params[:id])
@@ -37,11 +37,11 @@ class PortfoliosController < ApplicationController
           end
         end
       end
-      
+
      def show
          @portfolio_item = Portfolio.find(params[:id])
      end
-     
+
     # Set portfolio item, destroy, redirect.
     def destroy
         @portfolio_item = Portfolio.find(params[:id])
@@ -49,6 +49,5 @@ class PortfoliosController < ApplicationController
         respond_to do |format|
         format.html { redirect_to portfolios_url, notice: 'Portfolio item was successfully destroyed.' }
     end
-  end
-  
+    end
 end
