@@ -9,7 +9,6 @@
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= render 'shared/nav' %>
   </head>
 
   <body>
@@ -26,6 +25,8 @@
     <div class="container">
       <%= yield %>
     </div>
+
+    <%= render 'shared/nav', location: 'bottom' %>
 
     <% if session[:source] %>
      <p>Thanks for visiting me from <%= session[:source] %></p>
