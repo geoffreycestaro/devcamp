@@ -19,9 +19,8 @@
     <div class="container">
       <%= yield %>
     </div>
-
-    <% if session[:source] %>
-     <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
+    <br>
+    <hr>
+    <%= source_helper("application") %>
   </body>
 </html>
