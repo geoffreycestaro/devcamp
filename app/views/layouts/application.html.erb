@@ -16,11 +16,15 @@
 
     <%= login_helper %>
 
+    <%= source_helper("application") %>
+
     <div class="container">
       <%= yield %>
     </div>
-    <br>
-    <hr>
-    <%= source_helper("application") %>
   </body>
+
+  <footer>
+    <hr>
+    <%= @copyright %>
+  </footer>
 </html>
