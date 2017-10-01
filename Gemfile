@@ -65,3 +65,5 @@ gem 'friendly_id', '~> 5.1.0'
 # Password and user mgmt.
 gem 'devise', '~> 4.3'
 
+# Authorizations
+gem 'petergate', '~> 1.7'
