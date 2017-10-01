@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Devcamp</title>
+    <title>G Cestaro</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= render "shared/application_nav" %>
@@ -18,16 +18,13 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
 
-          <%= login_helper %>
           <%= source_helper("application") %>
           <%= yield %>
+          <%= render "shared/application_footer" %>
 
         </div>
       </div>
     </div>
   </body>
 
-  <footer>
-    <%= @copyright %>
-  </footer>
 </html>
