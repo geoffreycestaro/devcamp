@@ -2,10 +2,10 @@
   <td><%= blog.title %></td>
   <td><%= blog.body %>
   <br>
-  <button type="button" class="btn btn-success btn-sm"><%= link_to blog.status, toggle_status_blog_path(blog) %></button>
+  <button type="button" class="btn btn-success btn-sm"><%= link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:site_admin) %></button>
   <button type="button" class="btn btn-success btn-sm"><%= link_to 'Show', blog %></button>
-  <button type="button" class="btn btn-success btn-sm"><%= link_to 'Edit', edit_blog_path(blog) %></button>
-  <button type="button" class="btn btn-success btn-sm"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+  <button type="button" class="btn btn-success btn-sm"><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %></button>
+  <button type="button" class="btn btn-success btn-sm"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></button>
   </td>
   <td><%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</td>
 
