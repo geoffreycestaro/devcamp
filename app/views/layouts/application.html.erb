@@ -10,24 +10,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= render "shared/nav", location: 'top' %>
+    <%= render "shared/application_nav" %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-    <%= login_helper %>
+          <%= login_helper %>
+          <%= source_helper("application") %>
+          <%= yield %>
 
-    <%= source_helper("application") %>
-
-    <div class="container">
-      <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 
   <footer>
-    <hr>
     <%= @copyright %>
   </footer>
 </html>
