@@ -3,17 +3,17 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br />
     <p class="text-field"><%= f.text_field :name, autofocus: true %></p>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %><br />
     <p class="text-field"><%= f.email_field :email %></p>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :current_password %><br />
     <p class="text-field"><%= f.password_field :current_password, autocomplete: "off" %></p>
   </div>
@@ -23,36 +23,22 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <b>New </b><%= f.label :password %><br />
     <p class="text-field"><%= f.password_field :password, autocomplete: "off" %></p>
     <% if @minimum_password_length %>
     <% end %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password_confirmation %><br />
     <p class="text-field"><%= f.password_field :password_confirmation, autocomplete: "off" %></p>
   </div>
 <hr>
 
   <div class="row justify-content-center">
-    <div class="col-sm-3">
-    </div>
-
-    <div class="col-md-2">
-      <%= f.submit 'Update User', :class => 'btn btn-success' %>
-      <% end %>
-    </div>
-
-    <div class="col-md-2">
-      <button type="button" class="btn btn-danger"><%= link_to "Cancel Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></button>
-    </div>
-
-    <div class="col-md-2">
-      <button type="button" class="btn btn-warning"><%= link_to "Back", :back %></button>
-    </div>
-
-    <div class="col-sm-3">
-    </div>
+    <%= f.submit 'Update User', :class => 'btn btn-success' %><br><br>
+    <% end %>
+    <button type="button" class="btn btn-danger"><%= link_to "Cancel Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></button><br><br>
+    <button type="button" class="btn btn-warning"><%= link_to "Back", :back %></button>
   </div>
