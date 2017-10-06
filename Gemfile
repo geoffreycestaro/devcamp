@@ -67,3 +67,6 @@ gem 'devise', '~> 4.3'
 
 # Authorizations
 gem 'petergate', '~> 1.7'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
