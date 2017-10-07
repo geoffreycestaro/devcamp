@@ -29,8 +29,8 @@ puts "5 skills created"
         title: "Portfolio title: #{portfolio_item}",
         subtitle: "Ruby on Rails",
         body: "Simon is a coffee lover, former agency digital strategist, and Content Marketing Lead. When he isn’t hustling at HQ, you can most likely find him dining at restaurants across the city or brushing up on the latest design trends. Nick is a developer, tech enthusiast, and UX lover. He's spent the last 10 years working in the software industry, with a specialized focus on development. He counts advertising, psychology, and cinema among his myriad interests.",
-        main_image: "http://via.placeholder.com/100x280",
-        thumb_image: "http://via.placeholder.com/50x140"
+        main_image: "http://via.placeholder.com/216x280",
+        thumb_image: "http://via.placeholder.com/108x140"
         )
     end
 
@@ -39,8 +39,8 @@ Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
     subtitle: "Angular",
     body: "Simon is a coffee lover, former agency digital strategist, and Content Marketing Lead. When he isn’t hustling at HQ, you can most likely find him dining at restaurants across the city or brushing up on the latest design trends. Nick is a developer, tech enthusiast, and UX lover. He's spent the last 10 years working in the software industry, with a specialized focus on development. He counts advertising, psychology, and cinema among his myriad interests.",
-    main_image: "http://via.placeholder.com/100x280",
-    thumb_image: "http://via.placeholder.com/50x140"
+    main_image: "http://via.placeholder.com/216x280",
+    thumb_image: "http://via.placeholder.com/108x140"
     )
 end
 
