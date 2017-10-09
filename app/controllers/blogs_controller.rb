@@ -5,6 +5,8 @@ class BlogsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status
   ]}, site_admin: :all
 
+  #has_many :topics, dependent: :destroy
+
   # GET /blogs
   # GET /blogs.json
   def index
