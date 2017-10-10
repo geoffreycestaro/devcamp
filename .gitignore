@@ -20,3 +20,4 @@
 
 # Ignore my secrets.
 /config/secrets.yml
+.env
