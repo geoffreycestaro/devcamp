@@ -1,5 +1,9 @@
 module PagesHelper
+
   def twitter_parser tweet
+
+    tweet_array = tweet.split(':')
+    newtweet = tweet_array[1..99].join(':')
 
     regex = %r{
       \b
@@ -19,7 +23,7 @@ module PagesHelper
       )
     }ix
 
-    tweet.gsub(regex) do |url|
+    newtweet.gsub(regex) do |url|
       "<a href='#{url}' target='_blank'>LINK</a>"
     end.html_safe
 
