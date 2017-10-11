@@ -6,5 +6,5 @@
     <%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %> /
     <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
     </p>
-  <p><%= blog.body %></p>
+  <p><%= blog.body.html_safe %></p>
 </div>
