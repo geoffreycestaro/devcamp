@@ -1,15 +1,20 @@
-<div class="container">
+<div class="container portfolio-container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '50%' %>
+      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '75%' %>
     </div>
+
     <div class="col-md-5">
-      <%= link_to "View All Items", portfolios_path %>
       <h1><%= @portfolio_item.title %></h1>
-  <hr>
-      <h2><%= @portfolio_item.subtitle %></h2>
-      <p></p><%= @portfolio_item.body %></p>
-  <hr>
+
+      <hr>
+
+      <em><%= @portfolio_item.subtitle %></em>
+
+      <p><%= @portfolio_item.body %></p>
+
+      <hr>
+
       <h3>Technologies Used</h3>
 
       <% @portfolio_item.technologies.each do |t| %>
@@ -17,9 +22,9 @@
       <% end %>
 
       <% if logged_in?(:site_admin) %>
-      <div>
-        <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
-      </div>
+        <div class="">
+          <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
+        </div>
       <% end %>
     </div>
   </div>
