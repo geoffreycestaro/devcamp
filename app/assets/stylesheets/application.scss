@@ -212,15 +212,10 @@ body {
 }
 
 .tech-news {
-  color: black;
   text-shadow: none;
-  margin: 20px;
 }
 
 .tech-news a {
   color: green;
-}
-
-.tech-news>.card {
-  padding: 20px;
+  font-weight: bold;
 }

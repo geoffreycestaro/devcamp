@@ -1,15 +1,20 @@
-<div class="inner cover">
-  <h1 class="cover-heading">Tech News</h1>
+<div class='container'>
+  <div class="inner cover">
+  <h1 class="cover-heading">#Tech News</h1>
+  <br>
 
-  <div class='row'>
+    <div class='row justify-content-center'>
       <% @tweets.each do |tweet| %>
-        <div class='col-md-6'>
-          <div class='tech-news'>
-            <div class='card'>
-              <%= twitter_parser tweet %>
-            </div>
+      <div class='col-md-6'>
+        <div class="card text-white bg-dark mb-6 tech-news" style="max-width: 30rem;">
+          <div class="card-header bg-secondary">Tweet from: <a href='http://www.twitter.com/<%= tweet.split(':')[0] %>' target= '_blank'><%= tweet.split(':')[0] %></a>
+          </div>
+          <div class="card-body">
+            <p class="card-text tech-news"><%= twitter_parser tweet %></p>
           </div>
         </div>
+      </div>
       <% end %>
+    </div>
   </div>
 </div>
