@@ -10,18 +10,15 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
-require "dotenv-rails"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-Dotenv::Railtie.load
-module Devcamp
+
+module DevcampPortfolio
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
-    config.generators.system_tests = nil
     config.eager_load_paths << "#{Rails.root}/lib"
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
   end
 end
