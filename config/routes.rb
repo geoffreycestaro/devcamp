@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'yelp/index'
+
+  get 'yelp/results'
+
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
@@ -9,6 +13,9 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'tech-news', to: 'pages#tech_news'
+  get 'results' => 'yelp#results'
+  get 'yelp' => 'yelp#index'
+  post 'results' => 'yelp#results'
 
   resources :blogs do
     member do

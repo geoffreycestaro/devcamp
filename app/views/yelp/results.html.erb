@@ -1,0 +1,46 @@
+<div class="container">
+	<div id="carousel" class="carousel slide" data-ride="carousel">
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img class="d-block" src="/assets/yelp.jpg" alt="yelp!">
+	    </div>
+	  	<% @restaurants.each do |r| %>
+	    <div class="carousel-item">
+	      <%= image_tag r.image %>
+	      <div class="carousel-caption d-none d-md-block">
+	    		<h3><%= r.name %></h3>
+	  		</div>
+	    </div>
+	    <% end %>
+	  </div>
+	  <a class="carousel-control-prev" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="false"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+</div>
+
+<div class="container">
+	<h3>Restaurants serving <%= params[:term] %></h3>
+	<p>Near <%= params[:address] %></p>
+	<%= link_to "Search Again", root_path, class: 'btn btn-primary' %>
+</div>
+<br>
+<div class="container">
+	<div class="row" >
+		<% @restaurants.each do |r| %>
+		<div class="card text-white bg-dark mb-6" style="width: 20rem;">
+  		<%= image_tag r.image, style: "height: 180px; width: 318px;" %>
+  		<div class="card-body">
+    		<center><h4 class="card-title"><%= r.name %></h4>
+    		<p class="card-text"><%= r.address %>, <%= r.city %><br><%= r.price %></p>
+    		<%= link_to "Yelp Profile", r.url, class: "btn btn-primary" %></center>
+  		</div>
+		</div>
+    <% end %>
+	</div>
+</div>

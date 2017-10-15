@@ -92,6 +92,7 @@ GEM
     carrierwave-aws (1.3.0)
       aws-sdk-s3 (~> 1.0)
       carrierwave (>= 0.7, < 2.0)
+    certified (1.0.0)
     cocoon (1.2.10)
     coderay (1.1.2)
     coffee-rails (4.2.2)
@@ -125,6 +126,8 @@ GEM
     ffi (1.9.18-java)
     ffi (1.9.18-x64-mingw32)
     ffi (1.9.18-x86-mingw32)
+    figaro (1.1.1)
+      thor (~> 0.14)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
     friendly_id (5.1.0)
@@ -142,6 +145,8 @@ GEM
     http-form_data (1.0.3)
     http_parser.rb (0.6.0)
     http_parser.rb (0.6.0-java)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
     i18n (0.8.6)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -172,6 +177,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.2)
+    multi_xml (0.6.0)
     multipart-post (2.0.0)
     naught (1.1.0)
     nio4r (2.1.0)
@@ -318,13 +324,16 @@ DEPENDENCIES
   byebug
   carrierwave (~> 1.0)
   carrierwave-aws (~> 1.0, >= 1.0.2)
+  certified
   cocoon (~> 1.2, >= 1.2.9)
   coffee-rails (~> 4.2)
   devise (~> 4.3)
   dotenv-rails
+  figaro
   font-awesome-rails (~> 4.7, >= 4.7.0.1)
   friendly_id (~> 5.1.0)
   gritter (~> 1.2)
+  httparty
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails (~> 6.0, >= 6.0.1)

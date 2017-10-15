@@ -83,3 +83,5 @@ production:
   database: devcamp_production
   username: devcamp
   password: <%= ENV['DEVCAMP_DATABASE_PASSWORD'] %>
+
+

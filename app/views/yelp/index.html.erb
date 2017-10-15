@@ -1,0 +1,19 @@
+<div class="container">
+<img src="/assets/yelp.jpg">
+
+	<div class="row justify-content-center">
+	  	<div class="col-md-6">
+					<h2>Yelp API Restaurant Search</h2>
+					<br>
+		    	<h3>Let's Find Something to Eat!</h3>
+				<div class="card-body">
+			    	<%= form_tag results_path do %>
+			    	<%= text_field_tag :term, nil, placeholder: "What are you hungry for?", class: "form-control" %><br />
+			    	<%= text_field_tag :address, nil, placeholder:"Where are you?", class: "form-control" %><br />
+			    	<%= submit_tag "Feed Me!", class: "btn btn-primary" %>
+			    	<% end %>
+				</div>
+
+	    </div>
+	</div>
+</div>

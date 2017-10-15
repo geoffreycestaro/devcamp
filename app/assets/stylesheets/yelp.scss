@@ -1,0 +1,9 @@
+@import 'bootstrap';
+
+.carousel-item {
+  object-fit: none;
+  object-position: center;
+  width: 100%;
+  max-height: 360px;
+  margin-bottom: 1rem;
+}
